@@ -1,0 +1,8 @@
+
+build
+.qtcreator
+.vscode/
+.idea/
+.DS_Store
+
+result
