@@ -380,8 +380,8 @@ QWidget* MainWindow::createDistributionFunc() {
             lblParam2->setText("No usado:"); spinParam2->setValue(0); spinParam2->setEnabled(false);
             break;
         case 5:
-            lblParam1->setText("Límite Inf (a):"); spinParam1->setValue(1); spinParam1->setRange(-10000, 10000);
-            lblParam2->setText("Límite Sup (b):"); spinParam2->setValue(6); spinParam2->setRange(-10000, 10000);
+            lblParam1->setText("Tamaño (n) :"); spinParam1->setValue(1); spinParam1->setRange(0, 10000);
+            lblParam2->setText("No usado:"); spinParam2->setValue(0); spinParam2->setEnabled(false);
             break;
         case 6:
             lblParam1->setText("Límite Inf (a):"); spinParam1->setValue(0); spinParam1->setRange(-10000, 10000);
@@ -448,7 +448,7 @@ QWidget* MainWindow::createDistributionFunc() {
             else if (idx == 2)  dist = new GeometricDistribution(p1);
             else if (idx == 3)  dist = new NegativeBinomialDistribution(static_cast<int>(p1), p2);
             else if (idx == 4)  dist = new PoissonDistribution(p1);
-            else if (idx == 5)  dist = new UniformDiscreteDistribution(static_cast<int>(p1), static_cast<int>(p2));
+            else if (idx == 5)  dist = new UniformDiscreteDistribution(1, static_cast<int>(p1));
             else if (idx == 6)  dist = new UniformContinuousDistribution(p1, p2);
             else if (idx == 7)  dist = new NormalDistribution(p1, p2);
             else if (idx == 8)  dist = new ExponentialDistribution(p1);
