@@ -14,6 +14,7 @@ public:
 private:
     QWidget* createCombinatoricsPage();
     QWidget* createProbabilityPage();
-    QWidget* createRandomVariablePage();
+    QWidget* createRandomVar();
+    QWidget* createDistributionFunc();
 };
 #endif
